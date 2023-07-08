@@ -33,7 +33,7 @@ button {
   height: 50px;
   width: 100px;
   margin-left: 25px;
-  background-image: url("./images/logo.png");
+  background-image: url("../images/logo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
