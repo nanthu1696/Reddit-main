@@ -1,0 +1,820 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+.heading {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #edeff1;
+  background-color: #ffffff;
+  z-index: 2;
+}
+#headone {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  margin-right: 10px;
+}
+#logo {
+  height: 50px;
+  width: 100px;
+  margin-left: 25px;
+  background-color: #ff4500;
+  background-image: url("./images/logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#searchbar {
+  position: relative;
+  margin-left: 50px;
+}
+#searchbar box-icon {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+#searchbar input {
+  height: 44px;
+  width: 650px;
+  border-radius: 30px;
+  border: none;
+  margin: 3px 0px;
+  padding-left: 40px;
+  font-size: 14px;
+  background-color: whitesmoke;
+}
+#searchbar2 {
+  position: relative;
+  left: 50px;
+}
+#searchbar2 box-icon {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+#searchbar2 input {
+  height: 44px;
+  width: 300px;
+  border-radius: 30px;
+  border: none;
+  margin: 3px 0px;
+  padding-left: 40px;
+  font-size: 14px;
+  background-color: whitesmoke;
+}
+.drop {
+  height: 44px;
+  width: 250px;
+}
+#headtwo {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+#get {
+  height: 35px;
+  width: 130px;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#login {
+  width: 130px;
+  height: 35px;
+  background-color: #ff4500;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+}
+#login a {
+  color: white;
+}
+
+.dropdown {
+  height: 35px;
+}
+.dropdown button {
+  height: 35px;
+  background: whitesmoke;
+  border-radius: 5px;
+  color: black;
+  font-size: 16px;
+}
+.dropdown button:hover {
+  background: rgb(185, 181, 181);
+}
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+}
+.dropdown-menu a box-icon {
+  margin-right: 10px;
+}
+
+.sidebar {
+  top: 50px;
+  position: fixed;
+  width: 250px;
+  padding-left: 20px;
+  height: 100vh;
+  background-color: white;
+}
+.sidebar h1 {
+  font-size: 10px;
+  margin-bottom: 15px;
+  color: grey;
+}
+#popular {
+  height: 350px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+ion-icon {
+  font-size: 24px;
+}
+#feeds {
+  padding: 10px 10px;
+}
+#feeds a {
+  display: flex;
+  width: 80%;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+}
+#feeds p {
+  padding-left: 5px;
+}
+#topics {
+  padding: 0px 10px;
+}
+.dropdownside {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  background-color: white;
+}
+.dropdown-btn {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: white;
+}
+.dropdown-btn p {
+  padding-left: 5px;
+}
+
+.dropdown-cont {
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  transition: 0.5s;
+}
+.dropdown-cont a {
+  width: 200px;
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.dropdownside:hover .dropdown-cont {
+  display: block;
+  transition: 0.5s;
+}
+hr {
+  margin: 15px 0;
+  width: 200px;
+}
+#join p {
+  font-size: 14px;
+}
+#join button {
+  background-color: #ff4500;
+  border: none;
+  border-radius: 30px;
+  margin: 30px 0px;
+  width: 190px;
+  height: 35px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#join a {
+  color: white;
+}
+#postsContainer {
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  left: 255px;
+  top: 50px;
+  height: auto;
+  width: 955px;
+  background-color: #dae0e6;
+  padding: 20px;
+}
+#postheading {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: unset;
+  margin-bottom: 10px;
+}
+#togglebar {
+  align-items: center;
+  background-color: white;
+  border: 1px solid #dae0e6;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  width: 600px;
+}
+.hot {
+  background-color: #f6f7f8;
+  display: flex;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  border: none;
+  border-radius: 15px;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+.hot span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 18px;
+  max-height: 54px;
+  display: -webkit-inline-box;
+  white-space: normal;
+  text-align: left;
+  margin-left: 5px;
+  font-weight: 500;
+  color: grey;
+}
+
+.singlepost {
+  display: flex;
+  min-height: 150px;
+  height: auto;
+  width: 600px;
+  border: 1px solid whitesmoke;
+  border-radius: 7px;
+  background-color: white;
+  margin-bottom: 15px;
+  overflow: hidden;
+  position: relative;
+}
+.voteContainer {
+  height: auto;
+  width: 50px;
+  display: flex;
+  background-color: whitesmoke;
+}
+.buttonContainer {
+  align-items: center;
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  left: 5px;
+  padding: 8px 4px 8px 0;
+  position: absolute;
+  top: 0;
+}
+.buttonContainer button {
+  display: block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid whitesmoke;
+  cursor: pointer;
+  border-radius: 11px;
+}
+
+.buttonContainer button:hover {
+  box-shadow: 0 0 3px grey;
+}
+.buttonContainer span {
+  padding-bottom: 5px;
+  cursor: default;
+}
+.postText {
+  margin-top: 5px;
+  overflow-wrap: break-word;
+  width: 540px;
+  height: auto;
+}
+.postText h3 {
+  font-weight: 500;
+  pointer-events: none;
+  padding-left: 10px;
+  font-size: 18px;
+}
+.postText img {
+  height: 400px;
+  width: 500px;
+  padding: 10px;
+}
+.postText span {
+  font-size: 14px;
+  padding-left: 10px;
+}
+#postDetails {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+#profile {
+  border: none;
+  border-radius: 50%;
+  background-color: grey;
+  height: 25px;
+  width: 25px;
+  overflow: hidden;
+  margin-left: 10px;
+  position: relative;
+}
+#profile img {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 50px;
+  height: 50px;
+}
+#postDetails p {
+  margin: 0px 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+#postDetails span {
+  font-size: 14px;
+  color: grey;
+}
+.loader {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(#0000 10%, #ff4500);
+  border-radius: 50%;
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    transparent 50%,
+    black 100%
+  );
+  mask-image: radial-gradient(circle at center, transparent 50%, black 100%);
+  animation: animate 0.8s infinite linear;
+}
+.popup {
+  height: 100vh;
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 50px;
+  z-index: 9999;
+  box-shadow: 0 0 9px black;
+}
+.popup h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.popup p {
+  font-size: 14px;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent overlay */
+  z-index: 9998; /* Place the overlay below the popup */
+}
+.inputbox {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.inputbox input:focus ~ label,
+.inputbox input:hover ~ label,
+.inputbox input:valid ~ label {
+  color: grey;
+  top: 8px;
+  font-size: 0.7em;
+  left: 18px;
+}
+
+.inputbox input:focus,
+.inputbox input:hover {
+  border-color: grey; /* Custom outline color */
+}
+.inputbox input {
+  width: 100%;
+  height: 100%;
+  background: whitesmoke;
+  border: 1px solid whitesmoke;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0 35px 0 15px;
+  border-radius: 30px;
+  outline: none;
+}
+.btn {
+  border: none;
+}
+
+.btnn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  background-color: #ff4500;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.custom-select {
+  position: relative;
+  left: 20px;
+  width: 250px;
+  height: 40px;
+  margin: 5px 0px;
+}
+
+.select-header {
+  background-color: transparent;
+  padding: 0px 10px;
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-radius: 6px;
+}
+
+.select-header:hover {
+  outline: 2px solid #f0f0f0;
+}
+.arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+.arrow.open {
+  transform: rotate(225deg);
+}
+.selected-option span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selected-option span p {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.select-options {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+}
+.option span {
+  display: flex;
+  align-items: center;
+  width: 100px;
+}
+.option span p {
+  margin: 0;
+  padding-left: 10px;
+}
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+#headmid {
+  position: relative;
+  width: 250px;
+  display: flex;
+  align-items: center;
+}
+#headmid button {
+  border: none;
+  background-color: transparent;
+  margin: 0px 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+#headmid button box-icon {
+  z-index: -100;
+}
+#headmid button:hover {
+  outline: 2px solid #f0f0f0;
+}
+#headlast {
+  width: 250px;
+}
+
+#headlast .dropdown button {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  color: black;
+}
+#headlast span {
+  margin: 0px 5px;
+}
+
+#postsContainer1 {
+  z-index: 1;
+  position: relative;
+  top: 50px;
+  height: auto;
+  width: 100%;
+  background-color: #dae0e6;
+  padding: 20px 150px;
+}
+
+#createBar {
+  align-items: center;
+  background-color: white;
+  border: 1px solid #dae0e6;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  width: 600px;
+  height: 60px;
+}
+
+#createBar input {
+  width: 500px;
+  margin: 0px 10px;
+  padding-left: 10px;
+  height: 40px;
+  outline: none;
+  border-radius: 11px;
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+}
+
+#createBar input:hover,
+#createBar input:focus {
+  background-color: white;
+  outline: 1px solid skyblue;
+}
+
+#createContainer {
+  z-index: 1;
+  position: relative;
+  top: 50px;
+  height: 100vh;
+  width: 100%;
+  background-color: #dae0e6;
+  padding: 35px 60px;
+  display: flex;
+}
+
+#uploadPost {
+  height: auto;
+  width: 750px;
+}
+
+#uploadPost h1 {
+  font-size: 18px;
+}
+
+#separator {
+  width: 100%;
+  height: 1px;
+  background-color: whitesmoke;
+  margin: 15px 0px;
+}
+
+#tabContainer {
+  height: auto;
+  width: 100%;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.tab-buttons {
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #dae0e6;
+  display: flex;
+}
+.tab-buttons button {
+  width: 50%;
+  height: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.tab-buttons button.act {
+  border-bottom: 2px solid skyblue;
+  background-color: whitesmoke;
+}
+
+#newPostContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+#newPostContainer form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+#newPostContainer Form input {
+  height: 40px;
+  padding: 0px 10px;
+  border: 1px solid #dae0e6;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+#newPostContainer Form input:focus {
+  outline: 1px solid black;
+}
+
+#newPostContainer Form textarea {
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #dae0e6;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+#newPostContainer textarea:focus {
+  outline: 1px solid black;
+}
+
+.butContainer {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.butContainer button {
+  width: 100px;
+  height: 80%;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid black;
+  margin-left: 10px;
+}
+.butContainer button:nth-child(2) {
+  background-color: #ff4500;
+  border: none;
+  color: white;
+}
+#newImageContainer form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+#newImageContainer form input {
+  height: 40px;
+  padding: 0px 10px;
+  border: 1px solid #dae0e6;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+#newImageContainer input:focus {
+  outline: 1px solid black;
+}
+#imageHolder {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #dae0e6;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#rules {
+  background-color: white;
+  height: 250px;
+  margin: 20px 30px;
+  padding: 10px;
+  width: 350px;
+  border: 1px solud #dae0e6;
+  border-radius: 6px;
+}
+#rules p {
+  margin-left: 20px;
+}
+#rules li {
+  line-height: 35px;
+  border-top: 1px solid #dae0e6;
+}
+@keyframes animate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
