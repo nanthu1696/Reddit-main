@@ -52,18 +52,15 @@ function NewImage() {
       <Form method="post">
         <input placeholder="Title" name="title" />
         <div id="imageHolder">
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleImageChange}
-            name="image"
-          />
+          <input type="file" accept="image/*" onChange={handleImageChange} />
+          <input hidden="true" name="image" value={previewUrl} />
           {previewUrl && (
             <div>
               <img
                 src={previewUrl}
                 alt="Preview"
                 style={{ maxWidth: "400px", maxHeight: "300px" }}
+                name="area"
               />
             </div>
           )}
