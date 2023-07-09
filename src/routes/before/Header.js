@@ -1,15 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, Form, useSubmit } from "react-router-dom";
 import "boxicons";
-export default function Header() {
+export default function Header({ q }) {
+  const submit = useSubmit();
+  useEffect(() => {
+    document.getElementById("q").value = q;
+  }, [q]);
   return (
     <div className="heading">
       <div id="headone">
         <div id="logo"></div>
-        <div id="searchbar">
+        <Form id="searchbar" role="search">
           <box-icon name="search"></box-icon>
-          <input placeholder="Search Reddit" />
-        </div>
+          <input
+            id="q"
+            placeholder="Search Reddit"
+            name="q"
+            type="search"
+            defaultValue={q}
+            onChange={(event) => {
+              submit(event.currentTarget.form);
+            }}
+          />
+        </Form>
       </div>
       <div id="headtwo">
         <a href="https://play.google.com/store/apps/details?id=com.reddit.frontpage">
