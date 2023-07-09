@@ -1,12 +1,19 @@
 import React from "react";
 import CustomSelect from "./CustomSelect";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+  Form,
+  useSubmit
+} from "react-router-dom";
 
-export default function ToolBar() {
+export default function ToolBar({ q }) {
   let location = useLocation();
   let path = location.pathname;
   const user = path.split("/");
   const navigate = useNavigate();
+  const submit = useSubmit();
   function switchPageP(e) {
     navigate(`/${user[1]}/popular`);
   }
@@ -18,10 +25,18 @@ export default function ToolBar() {
       <div id="headone">
         <div id="logo"></div>
         <CustomSelect />
-        <div id="searchbar2">
+        <Form id="searchbar2" role="search">
           <box-icon name="search">Popular</box-icon>
-          <input placeholder="Search Reddit" />
-        </div>
+          <input
+            placeholder="Search Reddit"
+            type="search"
+            name="q"
+            onChange={(event) => {
+              submit(event.currentTarget.form);
+            }}
+            defaultValue={q}
+          />
+        </Form>
       </div>
       <div id="headmid">
         <Link to={`/${user[1]}/popular`}>
