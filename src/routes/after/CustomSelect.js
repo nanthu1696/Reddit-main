@@ -49,6 +49,14 @@ const CustomSelect = () => {
         </span>
       );
     }
+    if (user[2] === undefined) {
+      setSelectedOption(
+        <span>
+          <box-icon name="home-alt"></box-icon>
+          <p>Home</p>
+        </span>
+      );
+    }
   }, [path]);
   const toggleOptions = () => {
     setIsOpen(!isOpen);
