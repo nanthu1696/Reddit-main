@@ -30,6 +30,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    loader: rootLoader,
     children: [
       { index: true, element: <Posts />, loader: rootLoader },
       {
@@ -121,6 +122,7 @@ const router = createBrowserRouter([
   {
     path: "/user1",
     element: <Main />,
+    loader: rootLoader,
     children: [
       { index: true, element: <MainPost />, loader: rootLoader },
       {
@@ -165,6 +167,7 @@ const router = createBrowserRouter([
   {
     path: "/user2",
     element: <Main />,
+    loader: rootLoader,
     children: [
       { index: true, element: <MainPost />, loader: rootLoader },
       {
@@ -200,6 +203,8 @@ const router = createBrowserRouter([
       {
         path: "/user2/create",
         element: <CreatePost />,
+        loader: rootLoader,
+        action: rootAction,
         errorElement: <ErrorElement />
       }
     ]
