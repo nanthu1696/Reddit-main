@@ -2,12 +2,13 @@ import "../styles.css";
 import React from "react";
 import Header from "./Header";
 import SideBar from "./SideBar";
-import { Outlet, redirect } from "react-router-dom";
+import { Outlet, redirect, useLoaderData } from "react-router-dom";
 
 export default function App() {
+  let { posts, q } = useLoaderData();
   return (
     <div className="App">
-      <Header />
+      <Header q={q} />
       <SideBar />
       <Outlet />
     </div>
@@ -127,9 +128,23 @@ let data = [
   }
 ];
 
-export async function loader() {
-  let posts = data;
-  return { posts };
+function getfiteredPosts(q) {
+  console.log(q, "inside the get function");
+  let arr = data.filter(
+    (post) =>
+      post.title.toLowerCase().includes(q) ||
+      post.postedBy.toLowerCase().includes(q)
+  );
+  console.log(arr);
+  return arr;
+}
+export async function loader({ request }) {
+  const url = new URL(request.url);
+  const q = url.searchParams.get("q");
+  let posts = [];
+  if (q === "" || q === null) posts = data;
+  else posts = getfiteredPosts(q);
+  return { posts, q };
 }
 
 export async function action({ request, params }) {
