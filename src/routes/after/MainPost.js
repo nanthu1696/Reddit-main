@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import MPost from "./MPost";
+import Loading from "../before/Loading";
 import {
   useLoaderData,
   Link,
@@ -37,9 +38,13 @@ export default function Posts() {
           <span>Top</span>
         </Link>
       </div>
-      {posts.map((post, index) => {
-        return <MPost data={post} index={index} />;
-      })}
+      {posts.length ? (
+        posts.map((post) => {
+          return <MPost data={post} />;
+        })
+      ) : (
+        <Loading />
+      )}
     </div>
   );
 }
