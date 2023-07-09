@@ -659,7 +659,7 @@ hr {
   z-index: 1;
   position: relative;
   top: 50px;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #dae0e6;
   padding: 35px 60px;
@@ -788,12 +788,13 @@ hr {
 }
 #imageHolder {
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   border: 1px solid #dae0e6;
   margin-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 #rules {
