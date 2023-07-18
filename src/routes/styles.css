@@ -33,10 +33,21 @@ button {
   height: 50px;
   width: 100px;
   margin-left: 25px;
-  background-image: url("../images/logo.png");
+  background-image: url("https://logos-world.net/wp-content/uploads/2020/10/Reddit-Logo-700x394.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+#logoShrink {
+  cursor: pointer;
+  display: none;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  background-size: 40px 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://toppng.com/uploads/preview/reddit-logo-reddit-icon-115628658968pe8utyxjt.png");
 }
 #searchbar {
   position: relative;
@@ -110,8 +121,8 @@ button {
   color: white;
   cursor: pointer;
 }
-#login a {
-  color: white;
+#login span:nth-child(2) {
+  display: none;
 }
 
 .dropdown {
@@ -816,5 +827,80 @@ hr {
 @keyframes animate {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #logo {
+    display: none;
+  }
+  #logoShrink {
+    display: block;
+  }
+  #headone {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    width: 80%;
+    justify-content: space-between;
+  }
+  #searchbar {
+    position: relative;
+    margin-left: 20px;
+    width: 100%;
+  }
+  #searchbar box-icon {
+    position: absolute;
+    left: 15px;
+    top: 13px;
+  }
+  #searchbar input {
+    height: 44px;
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    margin: 3px 0px;
+    padding-left: 40px;
+    font-size: 14px;
+    background-color: whitesmoke;
+  }
+  #headtwo {
+    display: flex;
+    justify-content: flex-end;
+  }
+  #get {
+    width: 50px;
+    border-radius: 11px;
+    margin: 0px 10px;
+  }
+  #get span {
+    display: none;
+  }
+
+  #login {
+    width: 50px;
+    border-radius: 11px;
+    margin: 0px 10px;
+  }
+  #login span:nth-child(1) {
+    display: none;
+  }
+  #login span:nth-child(2) {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  #login span:nth-child(2) box-icon {
+    margin-top: 5px;
+  }
+  .sidebar {
+    display: none;
+  }
+  #postsContainer {
+    left: 0px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
