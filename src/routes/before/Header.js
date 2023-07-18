@@ -10,6 +10,9 @@ export default function Header({ q }) {
     <div className="heading">
       <div id="headone">
         <div id="logo"></div>
+        <Link to={"/"}>
+          <div id="logoShrink"></div>
+        </Link>
         <Form id="searchbar" role="search">
           <box-icon name="search"></box-icon>
           <input
@@ -28,12 +31,15 @@ export default function Header({ q }) {
         <a href="https://play.google.com/store/apps/details?id=com.reddit.frontpage">
           <button id="get">
             <box-icon name="qr-scan"></box-icon>
-            Get App
+            <span>Get App</span>
           </button>
         </a>
         <Link to={"/login"}>
           <button id="login" onClick={() => console.log("clicked")}>
-            Log In
+            <span>Log In</span>
+            <span>
+              <box-icon name="log-in"></box-icon>
+            </span>
           </button>
         </Link>
         <div class="dropdown">
