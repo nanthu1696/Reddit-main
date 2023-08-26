@@ -111,6 +111,7 @@ button {
 }
 
 #login {
+  position: relative;
   width: 130px;
   height: 35px;
   background-color: #ff4500;
@@ -121,6 +122,31 @@ button {
   color: white;
   cursor: pointer;
 }
+
+#login::after {
+  content: "Login to Reddit";
+  font-size: 10px;
+  display: block;
+  position: absolute;
+  bottom: -35px; /* Adjust this value to control the distance from the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+#login:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 #login span:nth-child(2) {
   display: none;
 }
@@ -843,6 +869,7 @@ hr {
     margin-right: 10px;
     width: 80%;
     justify-content: space-between;
+    margin-left: 10px;
   }
   #searchbar {
     position: relative;
@@ -902,5 +929,55 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  #logo {
+    display: none;
+  }
+  #headmid {
+    display: none;
+  }
+  #searchbar2 input {
+    width: 300px;
+  }
+  #headone {
+    width: auto;
+  }
+  .custom-select {
+    width: 120px;
+  }
+  #headlast {
+    position: absolute;
+    right: 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  #postheading {
+    display: none;
+  }
+  #togglebar {
+    display: none;
+  }
+  .singlepost {
+    width: 400px;
+  }
+  .postText {
+    width: 350px;
+  }
+  .postText img {
+    height: 300px;
+    width: 350px;
+    padding: 10px;
+  }
+  #get {
+    display: none;
+  }
+  #login {
+    display: none;
+  }
+  #searchbar2 {
+    display: none;
+  }
+  #createBar {
+    display: none;
   }
 }
