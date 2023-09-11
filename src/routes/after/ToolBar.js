@@ -23,7 +23,10 @@ export default function ToolBar({ q }) {
   return (
     <div className="heading">
       <div id="headone">
-        <div id="logo"></div>
+        <Link to={"/"}>
+          <div id="logo"></div>
+          <div id="logoShrink"></div>
+        </Link>
         <CustomSelect />
         <Form id="searchbar2" role="search">
           <box-icon name="search">Popular</box-icon>
