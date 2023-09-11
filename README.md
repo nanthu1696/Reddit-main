@@ -1,5 +1,6 @@
 # Reddit-main
-Features
+
+## Features
 
 - A homepage which displays all the recent posts.
 - The functionality to upvote and downvote a post.
@@ -9,3 +10,5 @@ Features
 - Tech Stack : HTML, CSS, JavaScript, React , React-Router.
 
 Description :  A web application in which a user can login, add a post and upvote and downvote other posts.
+
+
