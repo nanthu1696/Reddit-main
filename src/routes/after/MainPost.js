@@ -38,13 +38,15 @@ export default function Posts() {
           <span>Top</span>
         </Link>
       </div>
-      {posts.length ? (
-        posts.map((post) => {
-          return <MPost data={post} />;
-        })
-      ) : (
-        <Loading />
-      )}
+      <div id="afterPost">
+        {posts.length ? (
+          posts.map((post) => {
+            return <MPost data={post} />;
+          })
+        ) : (
+          <Loading />
+        )}
+      </div>
     </div>
   );
 }
