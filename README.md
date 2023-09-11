@@ -1,4 +1,4 @@
-# Reddit-main
+# Reddit Clone Project
 
 ## Features
 
